@@ -16,4 +16,46 @@ This dataset was released in the Scarton et al. ["Estimating post-editing effort
 }
 ```
 ## Data description
-There is a file for each post-editor (ANN0, ANN1, ANN2, ANN3 and ANN4). 
+There is a file for each post-editor (ANN0, ANN1, ANN2, ANN3 and ANN4). There is also a file called `header` with a header for each column of the post-editor files. Each file has a segment per line with the following information (separated by a `<tab>` (`\t`) character):
+
+```
+file_name: name of the original file
+line_in_file: line where this segment appear
+who: post-editor	
+type: type of the task (this will be PE for all segments)	
+src: source id
+sys: MT system id
+time: PE time	
+time/mlen: PE time divide by the machine-translated segment length
+slen: source segment length
+mlen: machine-translated segment length	
+plen: post-edited segment length
+schar: number of characters in the source	segment
+mchar: number of character in the machine-translated segment
+pchar: number of character in the post-edited segment	
+letters: letters typed
+digits: digits typed
+spaces: white chars typed
+symbols: special symbols typed
+navigation: navigation keystrokes
+erase: erasing keystrokes
+commands: commands entered (ctrl+c, etc.)
+visible: visible keys typed
+keystrokes: "total" keystrokes (except commands and navigation)
+keystrokes/mchar: keystrokes divide by the number of characters in the machine-translated segments
+allkeys: total keystrokes
+insertions: PET insertions
+deletions: PET deletions
+substitutions: PET substitutions
+shifts: PET shift
+S: source segment	
+REF: reference segment	
+MT: machine-translated segment	
+PE: post-edited segment	
+DA: direct assessment score	
+HTER: HTER score
+HBLEU: HBLEU score	
+HMETEOR: HMETEOR score	
+TER: TER score
+BLEU: BLEU score	
+METEOR: METEOR score
